@@ -16,11 +16,11 @@ export default function FeaturedItems() {
     if (prop === 'left') {
       setTimeout(() => {
         slider.scrollLeft -= 300;
-      }, 200);
+      }, 100);
     } else if (prop === 'right') {
       setTimeout(() => {
         slider.scrollLeft += 300;
-      }, 200);
+      }, 100);
     }
   };
 
