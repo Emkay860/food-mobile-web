@@ -45,6 +45,7 @@ export default function FeaturedItemCard() {
               width: '100%',
               paddingTop: 10,
               boxShadow: 3,
+              borderRadius: 2,
             }}
           >
             <CardContent sx={{ textAlign: 'center' }}>
