@@ -10,10 +10,10 @@ import Typography from '@mui/material/Typography';
 
 export default function CatalogueItemCard() {
   return (
-    <Card sx={{ maxWidth: 320 }}>
+    <Card sx={{ maxWidth: 400 }}>
       <CardMedia
         component="img"
-        height="150"
+        height="180px"
         src="../../amala.jpg"
         alt="food item"
       />
