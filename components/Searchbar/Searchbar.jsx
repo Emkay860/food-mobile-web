@@ -32,6 +32,7 @@ export default function Searchbar() {
           <OutlinedInput
             fullWidth
             id="searchbar"
+            placeholder="search..."
             value={values.searchbar}
             onChange={handleChange('searchbar')}
             startAdornment={
@@ -45,6 +46,9 @@ export default function Searchbar() {
                 </IconButton>
               </InputAdornment>
             }
+            sx={{
+              backgroundColor: 'white',
+            }}
           />
         </Grid>
         <Grid item xs={1}>
