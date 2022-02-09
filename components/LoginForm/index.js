@@ -10,15 +10,13 @@ import InputLabel from '@mui/material/InputLabel';
 import Button from '@mui/material/Button';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-export default function SignUpForm() {
+export default function LoginForm() {
   const {
     control,
     handleSubmit,
     formState: { errors },
   } = useForm({
     defaultValues: {
-      firstname: '',
-      lastname: '',
       email: '',
       password: '',
     },
@@ -29,46 +27,6 @@ export default function SignUpForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Stack spacing={3}>
-        <FormControl>
-          <InputLabel htmlFor="firstname">First Name</InputLabel>
-
-          <Controller
-            name="firstname"
-            control={control}
-            render={({ field }) => (
-              <OutlinedInput
-                id="firstname"
-                placeholder="E.g John"
-                type="text"
-                fullWidth
-                label="First Name"
-                className="white"
-                {...field}
-              />
-            )}
-          />
-        </FormControl>
-
-        <FormControl>
-          <InputLabel htmlFor="lastname">Last Name</InputLabel>
-
-          <Controller
-            name="lastname"
-            control={control}
-            render={({ field }) => (
-              <OutlinedInput
-                id="lastname"
-                placeholder="E.g Doe"
-                type="text"
-                fullWidth
-                label="Last Name"
-                className="white"
-                {...field}
-              />
-            )}
-          />
-        </FormControl>
-
         <FormControl>
           <InputLabel htmlFor="email">Email</InputLabel>
 
@@ -120,7 +78,7 @@ export default function SignUpForm() {
           size="large"
           endIcon={<ArrowForwardIcon fontSize="inherit" />}
         >
-          Sign up
+          Sign In
         </Button>
       </Stack>
     </form>

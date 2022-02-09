@@ -5,6 +5,7 @@ import SignUpForm from '../components/SignupForm';
 import styles from '../styles/Home.module.css';
 import Catalogue from '../views/Catalogue';
 import FeaturedItems from '../views/FeaturedItems';
+import SignupAndLogin from '../views/SignupAndLogin';
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <Searchbar />
       <FeaturedItems />
       <Catalogue /> */}
-      <SignUpForm />
+      <SignupAndLogin />
     </div>
   );
 }
