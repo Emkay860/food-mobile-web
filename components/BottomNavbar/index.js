@@ -6,7 +6,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
+import { ThemeProvider } from '@emotion/react';
 import { useRouter } from 'next/router';
+import theme from '../../theme';
 
 export default function BottomNavbar() {
   const [value, setValue] = useState('');
@@ -19,29 +21,35 @@ export default function BottomNavbar() {
   }, [value]);
 
   return (
-    <Box>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-        sx={{
-          position: 'fixed',
-          left: 0,
-          bottom: 0,
-          width: '100%',
-        }}
-      >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} value="/" />
-        <BottomNavigationAction label="Search" icon={<SearchIcon />} />
-        <BottomNavigationAction label="Settings" icon={<SettingsIcon />} />
-        <BottomNavigationAction
-          label="Profile"
-          icon={<PersonIcon />}
-          value="/home"
-        />
-      </BottomNavigation>
-    </Box>
+    <ThemeProvider theme={theme}>
+      <Box>
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+          sx={{
+            position: 'fixed',
+            left: 0,
+            bottom: 0,
+            width: '100%',
+          }}
+        >
+          <BottomNavigationAction
+            label="Home"
+            icon={<HomeIcon />}
+            value="/home"
+          />
+          <BottomNavigationAction label="Search" icon={<SearchIcon />} />
+          <BottomNavigationAction label="Settings" icon={<SettingsIcon />} />
+          <BottomNavigationAction
+            label="Profile"
+            icon={<PersonIcon />}
+            value="/profile"
+          />
+        </BottomNavigation>
+      </Box>
+    </ThemeProvider>
   );
 }

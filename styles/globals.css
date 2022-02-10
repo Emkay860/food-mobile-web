@@ -19,3 +19,7 @@ a {
 .white {
   background-color: white;
 }
+
+.text-gray {
+  color: gray;
+}

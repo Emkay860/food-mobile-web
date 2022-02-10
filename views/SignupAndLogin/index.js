@@ -4,6 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import TabPanel from '@mui/lab/TabPanel';
 import TabContext from '@mui/lab/TabContext';
 
@@ -28,7 +29,6 @@ export default function SignupAndLogin() {
               <Tabs
                 value={value}
                 onChange={handleChange}
-                className="white"
                 textColor="primary"
                 indicatorColor="primary"
                 aria-label="login and sign up tab"
@@ -38,10 +38,35 @@ export default function SignupAndLogin() {
                 <Tab value="signup" label="Register" />
               </Tabs>
             </Box>
+
             <TabPanel value="signup">
+              <Box
+                py={6}
+                sx={{
+                  width: '100%',
+                  margin: 'auto',
+                }}
+              >
+                <Typography variant="h3">Hello There</Typography>
+                <Typography variant="h6" className="text-gray">
+                  Welcome aboard
+                </Typography>
+              </Box>
               <SignUpForm />
             </TabPanel>
             <TabPanel value="login">
+              <Box
+                py={6}
+                sx={{
+                  width: '100%',
+                  margin: 'auto',
+                }}
+              >
+                <Typography variant="h3">Welcome back</Typography>
+                <Typography variant="h6" className="text-gray">
+                  We&apos;ve missed you
+                </Typography>
+              </Box>
               <LoginForm />
             </TabPanel>
           </TabContext>
