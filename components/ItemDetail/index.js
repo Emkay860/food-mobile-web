@@ -7,8 +7,6 @@ import Paper from '@mui/material/Paper';
 import Skeleton from '@mui/material/Skeleton';
 import Amala from '../../assets/amala.jpg';
 
-import styles from './ItemDetail.module.css';
-
 export default function ItemDetail() {
   return (
     <>
