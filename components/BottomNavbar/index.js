@@ -45,6 +45,7 @@ export default function BottomNavbar() {
           <BottomNavigationAction
             label="Add Menu"
             icon={<AddCircleOutlineIcon />}
+            value="/create-menu"
           />
           <BottomNavigationAction label="Settings" icon={<SettingsIcon />} />
           <BottomNavigationAction

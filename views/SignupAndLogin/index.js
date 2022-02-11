@@ -21,7 +21,7 @@ export default function SignupAndLogin() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container>
+      <Grid container mb={10}>
         <Grid xs={1} sm={2} md={3} lg={4}></Grid>
         <Grid xs={10} sm={8} md={6} lg={4}>
           <TabContext value={value}>

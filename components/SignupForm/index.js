@@ -17,7 +17,7 @@ export default function SignUpForm() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      firstname: '',
+      username: '',
       lastname: '',
       email: '',
       password: '',
@@ -30,18 +30,18 @@ export default function SignUpForm() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <Stack spacing={3}>
         <FormControl>
-          <InputLabel htmlFor="firstname">First Name</InputLabel>
+          <InputLabel htmlFor="username">Username</InputLabel>
 
           <Controller
-            name="firstname"
+            name="username"
             control={control}
             render={({ field }) => (
               <OutlinedInput
-                id="firstname"
+                id="username"
                 placeholder="E.g John"
                 type="text"
                 fullWidth
-                label="First Name"
+                label="username"
                 className="white"
                 {...field}
               />
