@@ -33,6 +33,7 @@ export default function CreateMenuForm() {
                 fullWidth
                 placeholder="E.g Brownie and coffee"
                 label="Title"
+                className="white"
                 {...field}
               />
             )}
@@ -49,6 +50,7 @@ export default function CreateMenuForm() {
                 type="number"
                 fullWidth
                 label="Price"
+                className="white"
                 {...field}
               />
             )}
@@ -59,7 +61,13 @@ export default function CreateMenuForm() {
             name="image"
             control={control}
             render={({ field }) => (
-              <OutlinedInput id="image" type="file" fullWidth {...field} />
+              <OutlinedInput
+                id="image"
+                type="file"
+                fullWidth
+                className="white"
+                {...field}
+              />
             )}
           />
         </FormControl>
@@ -75,6 +83,7 @@ export default function CreateMenuForm() {
                 fullWidth
                 rows={4}
                 label="Description"
+                className="white"
                 {...field}
               />
             )}
