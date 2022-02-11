@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Link from 'next/link';
 
 export default function CatalogueItemCard() {
   return (
@@ -27,8 +28,12 @@ export default function CatalogueItemCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Details</Button>
+        <Link href="menuItem/123" passHref>
+          <Button size="small">Share</Button>
+        </Link>
+        <Link href="menuItem/123" passHref>
+          <Button size="small">Details</Button>
+        </Link>
       </CardActions>
     </Card>
   );

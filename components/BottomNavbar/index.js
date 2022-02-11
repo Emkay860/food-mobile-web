@@ -6,6 +6,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { ThemeProvider } from '@emotion/react';
 import { useRouter } from 'next/router';
 import theme from '../../theme';
@@ -41,7 +42,10 @@ export default function BottomNavbar() {
             icon={<HomeIcon />}
             value="/home"
           />
-          <BottomNavigationAction label="Search" icon={<SearchIcon />} />
+          <BottomNavigationAction
+            label="Add Menu"
+            icon={<AddCircleOutlineIcon />}
+          />
           <BottomNavigationAction label="Settings" icon={<SettingsIcon />} />
           <BottomNavigationAction
             label="Profile"

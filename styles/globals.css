@@ -23,3 +23,9 @@ a {
 .text-gray {
   color: gray;
 }
+
+.horizontalRule {
+  width: 20%;
+  height: 3px;
+  background-color: orange;
+}
