@@ -22,8 +22,8 @@ export default function SignupAndLogin() {
   return (
     <ThemeProvider theme={theme}>
       <Grid container mb={10}>
-        <Grid xs={1} sm={2} md={3} lg={4}></Grid>
-        <Grid xs={10} sm={8} md={6} lg={4}>
+        <Grid xs={1} sm={2} md={3} lg={4} item></Grid>
+        <Grid xs={10} sm={8} md={6} lg={4} item>
           <TabContext value={value}>
             <Box sx={{ width: '100%' }}>
               <Tabs
@@ -71,7 +71,7 @@ export default function SignupAndLogin() {
             </TabPanel>
           </TabContext>
         </Grid>
-        <Grid xs={1} sm={2} md={3} lg={4}></Grid>
+        <Grid xs={1} sm={2} md={3} lg={4} item></Grid>
       </Grid>
     </ThemeProvider>
   );
