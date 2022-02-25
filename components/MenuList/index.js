@@ -60,7 +60,7 @@ export default function MenuList() {
         return row.id;
       }}
       onRowClick={(params) => {
-        alert(params.row.id);
+        console.log(params.row.id);
       }}
     />
   );
