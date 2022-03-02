@@ -1,13 +1,16 @@
 import React from 'react';
 import MenuList from '../../components/MenuList';
+import Grid from '@mui/material/Grid';
 
 export default function ProfileView() {
   return (
-    <div>
-      <div style={{ height: 400, width: '80%' }}>
-        <MenuList />
-      </div>
-    </div>
+    <>
+      <Grid container justifyContent="center">
+        <Grid item xs={10} md={8}>
+          <MenuList />
+        </Grid>
+      </Grid>
+    </>
   );
 }
 

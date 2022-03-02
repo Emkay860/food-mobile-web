@@ -16,9 +16,9 @@ export default function FeaturedItemCard() {
         container
         direction="column"
         alignItems="center"
-        sx={{ maxWidth: 200, flexShrink: 0 }}
+        sx={{ maxWidth: 200, minWidth: 150, flexShrink: 0 }}
         my={4}
-        mx={2}
+        mr={3}
       >
         <Grid
           item

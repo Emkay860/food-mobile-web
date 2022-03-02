@@ -14,6 +14,7 @@ import theme from '../../theme';
 export default function BottomNavbar() {
   const [value, setValue] = useState('');
   const router = useRouter();
+
   useEffect(() => {
     console.log(value);
     if (value !== '') {

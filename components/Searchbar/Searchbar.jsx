@@ -27,8 +27,8 @@ export default function Searchbar() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container spacing={2} mt={1} justifyContent="center">
-        <Grid item xs={8}>
+      <Grid container spacing={1} mt={1} justifyContent="center">
+        <Grid item xs={9} md={8}>
           <OutlinedInput
             fullWidth
             id="searchbar"

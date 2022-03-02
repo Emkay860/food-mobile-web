@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import UpdateMenuItem from '../UpdateMenuItem';
+import { orange } from '@mui/material/colors';
 
 export default function MenuList() {
   const [open, setOpen] = useState(false);
@@ -18,18 +19,28 @@ export default function MenuList() {
 
   // MUI column setings
   const columns = [
-    { field: 'id', headerName: 'ID', width: 90 },
+    {
+      field: 'id',
+      headerName: 'ID',
+      width: 90,
+      headerClassName: 'super-app-theme--header',
+      flex: 1,
+    },
     {
       field: 'firstName',
       headerName: 'First name',
       width: 150,
       editable: false,
+      headerClassName: 'super-app-theme--header',
+      flex: 1,
     },
     {
       field: 'lastName',
       headerName: 'Last name',
       width: 150,
       editable: false,
+      headerClassName: 'super-app-theme--header',
+      flex: 1,
     },
     {
       field: 'age',
@@ -37,11 +48,15 @@ export default function MenuList() {
       type: 'number',
       width: 110,
       editable: false,
+      headerClassName: 'super-app-theme--header',
+      flex: 1,
     },
     {
       field: 'fullName',
       headerName: 'Full name',
       description: 'This column has a value getter and is not sortable.',
+      headerClassName: 'super-app-theme--header',
+      flex: 1,
       sortable: false,
       width: 160,
       valueGetter: (params) =>
@@ -76,6 +91,19 @@ export default function MenuList() {
         onRowClick={(params) => {
           handleClickOpen('paper');
           console.log(params.row.id);
+        }}
+        sx={{
+          my: 10,
+          borderTop: '10px solid orange',
+          borderRight: '1px solid orange',
+          borderLeft: '1px solid orange',
+          borderBottom: '10px solid orange',
+          borderRadius: 2,
+          height: 400,
+          '& .MuiDataGrid-row:hover': {
+            backgroundColor: 'orange',
+            color: 'white',
+          },
         }}
       />
       <UpdateMenuItem
