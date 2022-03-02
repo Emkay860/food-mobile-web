@@ -85,6 +85,7 @@ export default function MenuList() {
         pageSize={5}
         rowsPerPageOptions={[5]}
         checkboxSelection={false}
+        disableSelectionOnClick={false}
         getRowId={(row) => {
           return row.id;
         }}
@@ -92,19 +93,7 @@ export default function MenuList() {
           handleClickOpen('paper');
           console.log(params.row.id);
         }}
-        sx={{
-          my: 10,
-          borderTop: '10px solid orange',
-          borderRight: '1px solid orange',
-          borderLeft: '1px solid orange',
-          borderBottom: '10px solid orange',
-          borderRadius: 2,
-          height: 400,
-          '& .MuiDataGrid-row:hover': {
-            backgroundColor: 'orange',
-            color: 'white',
-          },
-        }}
+        sx={{}}
       />
       <UpdateMenuItem
         scroll={scroll}
