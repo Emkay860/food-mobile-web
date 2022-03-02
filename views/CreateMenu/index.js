@@ -7,7 +7,7 @@ import { ThemeProvider } from '@emotion/react';
 export default function CreateMenuView() {
   return (
     <ThemeProvider theme={theme}>
-      <Grid container justifyContent="center" mt={2}>
+      <Grid container justifyContent="center" mt={2} mb={10}>
         <Grid>
           <CreateMenuForm />
         </Grid>
