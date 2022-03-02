@@ -21,7 +21,10 @@ export default function UpdateMenuItem({ scroll, open, handleClose }) {
           maxWidth="xs"
         >
           <DialogTitle id="update-dialog-title">Update Item</DialogTitle>
-          <DialogContent dividers={scroll === 'paper'}>
+          <DialogContent
+            dividers={scroll === 'paper'}
+            sx={{ '&::-webkit-scrollbar': { display: 'none' } }}
+          >
             <UpdateMenuForm />
           </DialogContent>
         </Dialog>
