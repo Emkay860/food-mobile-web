@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import UpdateMenuItem from '../UpdateMenuItem';
 
 export default function MenuList() {
+  const [open, setOpen] = useState(false);
+  const [scroll, setScroll] = useState('paper');
+
+  const handleClickOpen = (scrollType) => {
+    setOpen(true);
+    console.log('scrolltype', scrollType);
+    setScroll(scrollType);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   // MUI column setings
   const columns = [
     { field: 'id', headerName: 'ID', width: 90 },
@@ -49,19 +63,27 @@ export default function MenuList() {
   ];
 
   return (
-    <DataGrid
-      rows={rows}
-      columns={columns}
-      pageSize={5}
-      rowsPerPageOptions={[5]}
-      checkboxSelection={false}
-      disableSelectionOnClick
-      getRowId={(row) => {
-        return row.id;
-      }}
-      onRowClick={(params) => {
-        console.log(params.row.id);
-      }}
-    />
+    <>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        pageSize={5}
+        rowsPerPageOptions={[5]}
+        checkboxSelection={false}
+        getRowId={(row) => {
+          return row.id;
+        }}
+        onRowClick={(params) => {
+          handleClickOpen('paper');
+          console.log(params.row.id);
+        }}
+      />
+      <UpdateMenuItem
+        scroll={scroll}
+        open={open}
+        handleClickOpen={handleClickOpen}
+        handleClose={handleClose}
+      />
+    </>
   );
 }
